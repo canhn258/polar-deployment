@@ -5,7 +5,7 @@ metadata:
   labels:
     db: polar-postgres
 data:
-  init-sql: |
+  init.sql: |
     CREATE DATABASE polardb_catalog;
     CREATE DATABASE polardb_order;
 
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: polar-postgres
-          image: postgres:14.11
+          image: postgres:14.4
           env:
             - name: POSTGRES_USER
               value: user
