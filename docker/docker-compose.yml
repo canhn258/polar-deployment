@@ -62,3 +62,10 @@ services:
     volumes:
       # Mount the init.sql file to the /docker-entrypoint-initdb.d/ directory in the container
       - ./postgresql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # Redis service
+  polar-redis:
+    image: "redis:7.0"
+    container_name: "polar-redis"
+    ports:
+      - 6379:6379
